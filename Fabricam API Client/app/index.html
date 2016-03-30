@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="fabricam.api.client">
+<head>
+	<title>Fabricam API Client</title>
+	<meta charset="utf-8" />
+	
+	<link rel="stylesheet" href="components/office-ui-fabric/dist/css/fabric.min.css" />
+	<link rel="stylesheet" href="components/office-ui-fabric/dist/css/fabric.components.css" />
+	
+	<script src="components/angular/angular.min.js"></script>
+	<script src="components/angular-route/angular-route.min.js"></script>
+	<script src="components/adal-angular/dist/adal.min.js"></script>
+	<script src="components/adal-angular/dist/adal-angular.min.js"></script>
+	<script type="text/javascript" src="components/ng-office-ui-fabric/ngOfficeUiFabric.min.js"></script>
+	
+	<script src="app.js"></script>
+	<script src="homeCtrl.js"></script>
+</head>
+<body>
+	<div class="content">
+		<ng-view />
+	</div>
+	
+	<script type="text/ng-template" id="main.html">
+		<uif-textfield placeholder="Add new task" ng-model="newTaskText"></uif-textfield>
+		<uif-button uif-type="command" ng-click="createTask()">
+			<uif-icon uif-type="plus"></uif-icon>
+			Add task
+		</uif-button>
+		
+		<ul>
+			<li ng-repeat="task in tasks">
+			<span>{{task}}</span>
+			<uif-button uif-type="command" ng-click="deleteTask($index)">
+				Delete
+			</uif-button>
+			</li>
+		</ul>
+	</script>
+</body>
+</html>

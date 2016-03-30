@@ -1,0 +1,28 @@
+{
+  "name": "fabricam_api_client",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "adal-angular": "^1.0.8",
+    "angular-route": "^1.5.3",
+    "ng-office-ui-fabric": "^0.7.1",
+    "office-ui-fabric": "^2.2.0"
+  },
+  "resolutions": {
+    "angular": "1.4.9",
+    "office-ui-fabric": "2.1.0"
+  }
+}
